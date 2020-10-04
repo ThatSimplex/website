@@ -27,7 +27,16 @@ app.route('/login')
     res.render('login');
 })
 .post((req, res) => {
-    var usr = req.body;
-    console.log(usr);
-    res.send('Username and Password works!');
+    var usr = "Random_User";
+    var pwd = "Random!";
+    
+    var username = req.body.username;
+    var password = req.body.password;
+    
+    if (username == usr && password == pwd) {
+        res.send('Username and Password are correct!');
+    } else {
+        res.send('Wrong username or password');
+    }
+
 })
