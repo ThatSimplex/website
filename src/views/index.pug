@@ -3,9 +3,11 @@ Doctype
         head
             meta(charset UTF-8)
             title Random website
+            style
+                include ../styles/style.css
         body
             h1 This is my website I use to learn Node.js
             form(name="Testing_stuff" method="post")
                 input(type="text" name="pwd" placeholder="Random stuff")
-                button(id="testBTN" type="submit") submit
+                button(type="submit") submit
             a(href="/login") Login to the site
